@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #002147;
+    box-shadow: 0 2px 10px rgba( 0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    margin-right: auto;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+.album-tkj {
+     display: flex;
+    justify-content: center;  /* Horizontal */
+    align-items: center;      /* Vertical */
+    height: 10vh;    
+    flex-direction: column;
+    text-align: center;
+}
+
+.album-tkj h2 {
+    font-size: 36px;
+    margin-bottom: 0px;
+}

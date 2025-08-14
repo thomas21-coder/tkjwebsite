@@ -1,0 +1,328 @@
+body{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}    
+
+nav{
+    background-color:#002147;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 50px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li a {
+    padding: 10px 25px;
+}
+
+nav .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200px;
+}
+
+nav .menu li {
+    list-style: none;
+    padding: 10px;
+}
+
+nav .menu li:hover {
+    background-color: rgb(111, 134, 165);
+}
+
+nav .menu .dropdown {
+    display: none;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+    background-color: rgb(29, 42, 83);
+    position: absolute;
+    margin-top: 12px;
+    padding: 5px;
+    border-radius: 4px;
+
+}
+
+/* WELCOME */
+
+.tkj-musake {
+    display: flex;
+    justify-content: center; 
+    height: auto;        
+}
+
+.tkj-musake img {
+    width: 700px;
+}
+
+            /* KONTEN VIDIO AWAL */
+
+video {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.judul-keahlian {
+    text-align: center;
+}
+
+.judul2 {
+    display: flex;
+    justify-content: center;  /* Horizontal */
+    align-items: center;      /* Vertical */
+    height: 45vh;    
+    flex-direction: column;
+    text-align: center;
+}
+
+.judul2 h2{
+    font-size: 36px;
+    margin-bottom: 0px;
+
+}
+
+.judul2 p {
+    font-size: 18px;
+    color: #615f5f;
+    max-width: 500px;
+}
+
+/* KETERANGAN FOTO ZIGZAG */
+
+.zigzag {    
+    display: flex;
+    flex-direction: column;    
+    gap: 50px;
+    padding: 40px 20px;
+}
+
+.item {
+    display: flex;
+}
+
+.item.kiri {
+    justify-content: flex-start;
+}
+
+.item.kanan {
+    justify-content: flex-end;
+}
+
+.konten {   /* UKURAN GAMBAR PADA KONTEN ZIGZAG */
+    text-align: center;
+    max-width: 600px;
+}
+
+.konten figcaption {
+    margin: 16px;
+    color: #666;
+    font-style: italic;
+}
+
+.konten img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.konten p {
+    border: 4px solid transparent;
+    padding: 15px;
+    text-align: left;
+    background-color: #f5f5f5e8;
+    border-radius: 10px;
+    background-image: none
+        linear-gradient(white, white)
+        linear-gradient(135deg, #ff7e5f, #feb47b);
+    background-origin: border-box;
+    box-shadow: 10px 12px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+    font-size: 16px;
+    color: #000000;
+}
+
+                    /* RESPONSIVE LAYOUT UNTUK HP */
+
+    @media (max-width: 768px) {
+        .item {
+            justify-content: center;
+        }
+        .zigzag::before {
+            display: none;
+        }
+
+        .item.kiri, .item.kanan {
+            justify-content: center;
+        }
+
+        .konten {
+            max-width: 90%;
+        }
+    }
+
+                /* MENAMBAHKAN GARIS DI TENGAH ZIGZAG */
+
+    .zigzag {
+        position: relative;
+    }
+
+                    /* GARIS TENGAH */
+
+    .zigzag::before {
+        content: '';
+        position: absolute;
+        top: 1300px;
+        bottom: 0;
+        left: 50%;
+        width: 5px;
+        background-color: #ccc;
+        transform: translateY(-50%);
+        z-index: -1;
+        height: 2000px;
+    }
+
+    /* POSTER PPDB */
+    .border {
+        width: 55%;             
+        height: 1100px;        
+        border: 2px solid #ccc; 
+        border-radius: 10px; 
+        background-color: #fff;
+        padding: 10px;            
+        margin: 150px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        text-align: center;   
+        transition: all 0.3s ease;
+   }
+
+   .card h2 {
+    font-size: 38px;
+    margin: 60px;
+   }
+
+   
+    .card h2::after {
+        content: "";
+        display: block;
+        width: 500px;
+        height: 5px;
+        background-color: #525050;
+        margin: 30px auto 0 ;
+        border-radius: 3px;
+    }
+
+    .card img {
+        width: 75%;
+    }
+
+    .patner {
+       text-align: center; 
+    }
+
+    .patner h2 {
+         font-size: 30px;
+         margin-bottom: 0px;
+         font-weight: normal;
+    }
+
+    .patner p {
+         font-size: 15px;
+         color: #615f5f;
+         margin: 3px;
+         margin-bottom: 80px;
+    }
+
+    .marquee {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        background: #fff;
+    }
+
+    .marquee-content {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+        
+    }
+
+    .marquee-content img {
+        width: 100px;
+        height: auto;
+        margin-right: 30px;
+        vertical-align: middle;
+
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+         }
+    }
+
+    .footer{
+                text-align: center;
+                padding: 1px 10px;
+                background-color:#002147 ;
+                color: white;
+                width: 100%;
+                font-size: 20px;
+                line-height: 0px;
+            }
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0px;
+    }
+
+    .footer a:hover {
+        text-decoration:unset;
+    }
+
+    .footer i {
+        margin-right: 5px;
+    }
+
+    .sosmed {
+        display: flex;
+        text-align: auto;
+        justify-content: center;
+        align-items: auto; 
+        margin-left: 5px;
+        gap: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .link-biasa1 {
+    color: magenta;/*warna text default alias hitam*/
+    text-decoration: none; /* hilangkan garis bawah*/
+    cursor: pointer;
+    }
+
+    .link-biasa1:hover {
+    color: blue;
+    }
+
+    .link-biasa2{
+    color: green;/*warna text default alias hitam*/
+    text-decoration: none; /* hilangkan garis bawah*/
+    cursor: pointer;
+    }
+
+    .link-biasa2:hover {
+    color: blue;
+    }
